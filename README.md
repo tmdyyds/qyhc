@@ -1,6 +1,6 @@
 ## 设计模式
 ### php
-- [单利模式 ](docs/dataStructures-algorithms/几道常见的子符串算法题.md)
+- [单利模式 ](DesignPatterns/php/Singleton.php)
 
 ### golang
 - [单利模式]
