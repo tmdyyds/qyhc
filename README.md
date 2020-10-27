@@ -14,4 +14,5 @@
 
 ## 算法
 ### leetcode刷题
-- [1365.有多少小于当前数字的数字(golang)](Alg/leetcode/SmallerNumbersThanCurrent.go)
+- [1365. 有多少小于当前数字的数字(golang)](Alg/leetcode/smallerNumbersThanCurrent.go)
+- [144. 二叉树的前序遍历(golang)](Alg/leetcode/preorderTraversal.go)
