@@ -4,16 +4,14 @@
 - [适配器模式(结构型) ](DesignPatterns/php/Adapter.php)
 - [门面模式(结构型) ](DesignPatterns/php/Adapter.php)
 
-### golang
-- [单利模式]
-
-## 算法
-### leetcode刷题
-
-## 缓存
+<!-- ## 缓存
 
 ## 数据库
 
 ## 算法
 
-## 网络
+## 网络 -->
+
+## 算法
+### leetcode刷题
+- [1365.有多少小于当前数字的数字(golang)](Alg/leetcode/SmallerNumbersThanCurrent.go)
