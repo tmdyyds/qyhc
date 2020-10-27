@@ -28,7 +28,7 @@ func smallerNumbersThanCurrent(nums []int) []int {
 /*
     计数排序
     时间复杂度：O(N+k)，k为开辟值域大小。
-    空间复杂度：O(k)
+    空间复杂度：O(k )
 */
 func smallerNumbersThanCurrent(nums []int) []int {
     cnt := [101]int{}
