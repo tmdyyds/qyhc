@@ -1,4 +1,5 @@
 <?php
+    //mysql基础
 
     sql在mysql中执行流程: sql语句->查询缓存(mysql8.0已删除)->解析器->优化器->执行器
     show profile;获取上一次请求的执行时间(解析模块、优化模块等各个时间)(select @@profiling; set profiling=1)
@@ -70,8 +71,42 @@
     ALTER VIEW view_name AS SELECT column1, column2 FROM table WHERE condition //修改视图
     DROP TABLE view_name
 
+    //存储过程
+    CREATE PROCEDURE 存储过程名称([参数列表])
+    BEGIN
+        需要执行的语句
+    END
+    /*
+    //例子
+    DELIMITER //
+    CREATE PROCEDURE `add_num`(IN n INT)
+    BEGIN
+           DECLARE i INT;
+           DECLARE sum INT;
 
-    //优化总结
+           SET i = 1;
+           SET sum = 0;
+           WHILE i <= n DO
+                  SET sum = sum + i;
+                  SET i = i +1;
+           END WHILE;
+           SELECT sum;
+    END //
+    DELIMITER ;
+    */
+    DROP TABLE view_name //删除存储过程
+
+    //隔离级别
+    脏读: A事务读到B事务修正但是还没有commit的数据,读未提交的数据,称为脏读
+    不可重复读: 对某数据进行读取,两次读取的结果不同,这因为其他事务对改数据进行了修改或删除
+    幻读(专指插入数据): 在事务中,前后两次查询到符合条件数据总数不一致,其他事务插入数据
+
+
+
+TIP: 临时表只在当前连接存在,关闭连接后,临时表就会自动释放
+
+    //优化
+
     COUNT(*) = COUNT(1) > COUNT(字段)
     //ORDRE BY
     SQL中，可以在WHERE子句和ORDER BY子句中使用索引，目的是在WHERE子句中避免全表扫描，ORDER BY子句避免使用FileSort排序。
