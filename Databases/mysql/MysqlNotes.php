@@ -65,6 +65,11 @@
         9、LIMIT筛选
     */
 
+    //视图
+    CREATE VIEW view_name AS SELECT column1, column2 FROM table WHERE condition
+    ALTER VIEW view_name AS SELECT column1, column2 FROM table WHERE condition //修改视图
+    DROP TABLE view_name
+
 
     //优化总结
     COUNT(*) = COUNT(1) > COUNT(字段)
