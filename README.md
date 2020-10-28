@@ -4,6 +4,7 @@
 - [适配器模式(结构型) ](DesignPatterns/php/Adapter.php)
 - [门面模式(结构型) ](DesignPatterns/php/Adapter.php)
 - [代理模式(结构型) ](DesignPatterns/php/Proxy.php)
+- [装饰器(结构型) ](DesignPatterns/php/Decorator.php)
 
 <!-- ## 缓存
 
