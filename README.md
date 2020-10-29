@@ -14,11 +14,12 @@
 ## 算法
 
 ## 网络 -->
-## php常用笔记
+## PHP常用笔记
 ### php常识
 - [php日常记录](Notebooks/php/PhpNotes.php)
-###php常用类和函数
-## nginx
+
+### php常用类和函数
+## NGINX
 ### nginx常识
 - [nginx日常记录](Notebooks/php/NginxNotes.php)
 
