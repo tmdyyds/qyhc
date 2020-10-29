@@ -14,9 +14,21 @@
 ## 算法
 
 ## 网络 -->
+## php常用笔记
+### php常识
+- [php日常记录](Notebooks/php/PhpNotes.php)
+###php常用类和函数
+## nginx
+### nginx常识
+- [nginx日常记录](Notebooks/php/NginxNotes.php)
+
+## 缓存
+### redis
+- [redis常用笔记](Notebooks/redis/RedisNotes.php)
+
 ## 数据库
 ### MYSQL
-- [mysql笔记(语法&优化&注重点)](Databases/mysql/MysqlNotes.php)
+- [mysql笔记(语法&优化&注重点)](Notebooks/mysql/MysqlNotes.php)
 
 ## 算法
 ### leetcode刷题
