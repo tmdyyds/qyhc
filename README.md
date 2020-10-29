@@ -16,16 +16,16 @@
 ## 网络 -->
 ## PHP常用笔记
 ### php常识
-- [php日常记录](Notebooks/php/PhpNotes.php)
+- [php笔记](Notebooks/php/PhpNoets.php)
 
 ### php常用类和函数
 ## NGINX
 ### nginx常识
-- [nginx日常记录](Notebooks/php/NginxNotes.php)
+- [nginx笔记](Notebooks/nginx/NginxNotes.php)
 
 ## 缓存
 ### redis
-- [redis常用笔记](Notebooks/redis/RedisNotes.php)
+- [redis笔记](Notebooks/redis/RedisNotes.php)
 
 ## 数据库
 ### MYSQL
