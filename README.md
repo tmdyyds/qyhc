@@ -16,12 +16,13 @@
 ## 网络 -->
 ## PHP
 ### php知识
-- [php笔记](Notebooks/php/PhpNoets.php)
+- [fastcgi&phpfpm&5XX错误](Notebooks/php/PhpNoets.php)
+- [php执行过程](Notebooks/php/PhpProcessing.php)
 
 ### php功能性类和方法
 ## NGINX
 ### nginx知识
-- [nginx笔记](Notebooks/nginx/NginxNotes.php)
+- [nginx500XX错误](Notebooks/nginx/NginxNotes.php)
 
 ## 缓存
 ### redis知识
