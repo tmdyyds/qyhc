@@ -17,7 +17,7 @@
 ## PHP
 ### php知识
 - [fastcgi&phpfpm&5XX错误](Notebooks/php/PhpNoets.php)
-- [php执行过程](Notebooks/php/PhpProcessing.php)
+- [php执行过程](Notebooks/php/PhpProcessing.md)
 
 ### php功能性类和方法
 ## NGINX

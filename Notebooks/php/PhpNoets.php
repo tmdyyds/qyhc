@@ -9,3 +9,4 @@ https://www.awaimai.com/371.html
 https://www.miss77.net/2017/08/php-fpm-working-mechanism/
 http://www.stelin.me/2017/06/09/php-fpm%E8%AF%A6%E8%A7%A3 //fastcgi包含 502 504情况
 https://blog.wangzhipeng.top/2019/04/18/2019_04_18/
+https://juejin.im/post/6844903784670298126
