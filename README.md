@@ -34,6 +34,7 @@
 
 ## 算法
 ### leetcode刷题
-- [1365. 有多少小于当前数字的数字(golang)](Alg/leetcode/smallerNumbersThanCurrent.go)
-- [1207. 独一无二的出现次数(golang)](Alg/leetcode/uniqueOccurrences.go)
 - [144. 二叉树的前序遍历(golang)](Alg/leetcode/preorderTraversal.go)
+- [1207. 独一无二的出现次数(golang)](Alg/leetcode/uniqueOccurrences.go)
+- [1365. 有多少小于当前数字的数字(golang)](Alg/leetcode/smallerNumbersThanCurrent.go)
+
