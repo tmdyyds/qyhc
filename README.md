@@ -1,6 +1,7 @@
 ## 设计模式
 ### php
 - [单利模式(创建型) ](DesignPatterns/php/Singleton.php)
+- [生成器模式(创建型) ](DesignPatterns/php/Builder.php)
 - [适配器模式(结构型) ](DesignPatterns/php/Adapter.php)
 - [门面模式(结构型) ](DesignPatterns/php/Adapter.php)
 - [代理模式(结构型) ](DesignPatterns/php/Proxy.php)
