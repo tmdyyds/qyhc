@@ -34,8 +34,12 @@
 - [mysql笔记(语法&优化&注重点)](Notebooks/mysql/MysqlNotes.php)
 
 ## 算法
+### 算法知识
+- [排序算法(golang)](Alg/exercisealg/sort.go)
+
 ### leetcode刷题
 - [144. 二叉树的前序遍历(golang)](Alg/leetcode/preorderTraversal.go)
 - [1207. 独一无二的出现次数(golang)](Alg/leetcode/uniqueOccurrences.go)
 - [1365. 有多少小于当前数字的数字(golang)](Alg/leetcode/smallerNumbersThanCurrent.go)
+
 
