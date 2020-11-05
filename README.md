@@ -1,5 +1,6 @@
 ## 设计模式
 ### php
+- [工厂方法&抽象工厂模式(创建型) ](DesignPatterns/php/Factory.php)
 - [单利模式(创建型) ](DesignPatterns/php/Singleton.php)
 - [生成器模式(创建型) ](DesignPatterns/php/Builder.php)
 - [原型模式(创建型) ](DesignPatterns/php/Clone.php)
