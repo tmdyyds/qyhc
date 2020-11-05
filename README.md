@@ -37,7 +37,7 @@
 
 ## 算法
 ### 算法知识
-- [排序算法(golang)](Alg/exercisealg/sort.go)
+- [排序算法(冒泡、选择、插入、快排、归并)(golang)](Alg/exercisealg/sort.go)
 
 ### leetcode刷题
 - [144. 二叉树的前序遍历(golang)](Alg/leetcode/preorderTraversal.go)
