@@ -45,5 +45,7 @@
 - [215. 数组中的第K个最大元素(golang)](Alg/leetcode/findKthLargest.go)
 - [1207. 独一无二的出现次数(golang)](Alg/leetcode/uniqueOccurrences.go)
 - [1365. 有多少小于当前数字的数字(golang)](Alg/leetcode/smallerNumbersThanCurrent.go)
+- [1528. 重新排列字符串(golang)](Alg/leetcode/restoreString.go)
+- [1640. 能否连接形成数组(golang)](Alg/leetcode/canFormArray.go)
 
 
