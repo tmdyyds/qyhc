@@ -1,17 +1,6 @@
-//冒泡
-test := []int{4, 5, 6, 3, 2, 1}
-bubbleSort(test)
-fmt.Println(test)
+//桶排序
 
-//插入排序
-test := []int{4, 5, 6, 3, 2, 1}
-InsertionSort(test)
-fmt.Println(test)
 
-//选择排序
-test : = []int{4, 5, 6, 3, 2, 1}
-SelectionSort(test)
-fmt.Println(test)
 
 //选择排序 时间复杂度O(N^2) 空间复杂度O(1) 原地排序
 func SelectionSort(r []int) {
@@ -149,7 +138,7 @@ func merge(arr []int, start, mid, end int) {
 
 
 //start
-//快速排序
+//快速排序 时间复杂度O(nlogn) 空间复杂度O(n)
 func Quicksort(arr []int) {
 	n := len(arr)
 	if n <= 1 {
