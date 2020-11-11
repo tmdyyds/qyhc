@@ -34,6 +34,7 @@
 ## 数据库
 ### MYSQL知识
 - [mysql笔记(语法&优化&注重点)](Notebooks/mysql/MysqlNotes.php)
+- [mysql笔记(语法&优化&注重点)](Notebooks/mysql/MysqlNotes.md)
 
 ## 算法
 ### 算法知识
