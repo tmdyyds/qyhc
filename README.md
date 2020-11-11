@@ -43,6 +43,8 @@
 ### leetcode刷题
 - [144. 二叉树的前序遍历(golang)](Alg/leetcode/preorderTraversal.go)
 - [215. 数组中的第K个最大元素(golang)](Alg/leetcode/findKthLargest.go)
+- [349. 两个数组的交集(golang)](Alg/leetcode/intersection.go)
+- [922. 按奇偶排序数组 II(golang)](Alg/leetcode/sortArrayByParityII.go)
 - [1207. 独一无二的出现次数(golang)](Alg/leetcode/uniqueOccurrences.go)
 - [1365. 有多少小于当前数字的数字(golang)](Alg/leetcode/smallerNumbersThanCurrent.go)
 - [1528. 重新排列字符串(golang)](Alg/leetcode/restoreString.go)
