@@ -47,6 +47,7 @@
 - [349. 两个数组的交集(golang)](Alg/leetcode/intersection.go)
 - [922. 按奇偶排序数组 II(golang)](Alg/leetcode/sortArrayByParityII.go)
 - [1207. 独一无二的出现次数(golang)](Alg/leetcode/uniqueOccurrences.go)
+- [1356. 根据数字二进制下 1 的数目排序(golang)](Alg/leetcode/sortByBits.go)
 - [1365. 有多少小于当前数字的数字(golang)](Alg/leetcode/smallerNumbersThanCurrent.go)
 - [1491. 去掉最低工资和最高工资后的工资平均值(golang)](Alg/leetcode/average.go)
 - [1528. 重新排列字符串(golang)](Alg/leetcode/restoreString.go)
