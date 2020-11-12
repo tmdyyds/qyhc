@@ -49,6 +49,7 @@
 - [1207. 独一无二的出现次数(golang)](Alg/leetcode/uniqueOccurrences.go)
 - [1356. 根据数字二进制下 1 的数目排序(golang)](Alg/leetcode/sortByBits.go)
 - [1365. 有多少小于当前数字的数字(golang)](Alg/leetcode/smallerNumbersThanCurrent.go)
+- [1403. 非递增顺序的最小子序列(golang)](Alg/leetcode/minSubsequence.go)
 - [1491. 去掉最低工资和最高工资后的工资平均值(golang)](Alg/leetcode/average.go)
 - [1502. 判断能否形成等差数列(golang)](Alg/leetcode/canMakeArithmeticProgression.go)
 - [1528. 重新排列字符串(golang)](Alg/leetcode/restoreString.go)
