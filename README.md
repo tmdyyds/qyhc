@@ -52,6 +52,7 @@
 - [1491. 去掉最低工资和最高工资后的工资平均值(golang)](Alg/leetcode/average.go)
 - [1502. 判断能否形成等差数列(golang)](Alg/leetcode/canMakeArithmeticProgression.go)
 - [1528. 重新排列字符串(golang)](Alg/leetcode/restoreString.go)
+- [1636. 按照频率将数组升序排序(golang)](Alg/leetcode/frequencySort.go)
 - [1640. 能否连接形成数组(golang)](Alg/leetcode/canFormArray.go)
 
 
