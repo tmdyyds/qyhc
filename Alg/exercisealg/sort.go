@@ -1,7 +1,3 @@
-//桶排序
-
-
-
 //选择排序 时间复杂度O(N^2) 空间复杂度O(1) 原地排序
 func SelectionSort(r []int) {
 	n := len(r)
