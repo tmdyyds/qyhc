@@ -19,7 +19,7 @@
 ## 网络 -->
 ## 随时随记
 ### 随记笔记
-- [随记](AnyTimeRecords/AnyTimeRecord.md)
+- [Code随记](AnyTimeRecords/AnyTimeCodeRecord.md)
 ## PHP
 ### php知识
 - [fastcgi&phpfpm&5XX错误](Notebooks/php/PhpNoets.php)
