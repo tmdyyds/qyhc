@@ -17,6 +17,9 @@
 ## 算法
 
 ## 网络 -->
+## 随时随记
+### 随记笔记
+    - [随记](AnyTimeRecoreds/AnyTimeRecord.md)
 ## PHP
 ### php知识
 - [fastcgi&phpfpm&5XX错误](Notebooks/php/PhpNoets.php)
