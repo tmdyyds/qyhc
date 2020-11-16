@@ -67,6 +67,7 @@
 - [1528. 重新排列字符串(golang)](Alg/leetcode/restoreString.go)
 - [1636. 按照频率将数组升序排序(golang)](Alg/leetcode/frequencySort.go)
 - [1640. 能否连接形成数组(golang)](Alg/leetcode/canFormArray.go)
+- [面试题 16.16. 部分排序(golang)](Alg/leetcode/subSort.go)
 - [面试题 16.21. 交换和(golang)](Alg/leetcode/findSwapValues.go)
 
 
