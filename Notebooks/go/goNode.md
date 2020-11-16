@@ -1,4 +1,8 @@
 ## 重点知识
+#### 命令
+- go build：用于测试编译包，在项目目录下生成可执行文件（有main包）,不能生成包文件, go install 可以生成包文件
+- go install：主要用来生成库和工具。一是编译包文件（无main包），将编译后的包文件放到 pkg 目录下（$GOPATH/pkg）。二是编译生成可执行文件（有main包），将可执行文件放到 bin 目录（$GOPATH/bin）,生成可执行文件在当前目录下， go install 生成可执行文件在bin目录下（$GOPATH/bin）
+
 #### 环境变量
 - $GOROOT 表示 Go 在你的电脑上的安装位置，它的值一般都是 $HOME/go，当然，你也可以安装在别的地方
 - $GOARCH 表示目标机器的处理器架构，它的值可以是 386、amd64 或 arm
@@ -23,5 +27,5 @@ Go编译器支持交叉编译，也就是说你可以在一台机器上构建运
 - /src/cmd：包含 Go 和 C 的编译器和命令行脚本
 
 #### import
-- import引包时,路径从GOPATH的src下开始,不用带src,编译器会自动从src中开始引入
-- 
+- 标准库包引入时,路径从GOROOT
+- import自定义引包时,路径从GOPATH的src下开始,不用带src,编译器会自动从src中开始引入
