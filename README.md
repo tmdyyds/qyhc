@@ -33,7 +33,7 @@
 
 ### php封装类&函数
 - [类]()
-- [函数] ()
+- [函数]()
 ## NGINX
 ### nginx知识
 - [nginx500XX错误](Notebooks/nginx/NginxNotes.php)
