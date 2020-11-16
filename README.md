@@ -29,7 +29,7 @@
 - [php执行过程](Notebooks/php/PhpProcessing.md)
 
 ### golang
-- [go重点基础知识](Notebooks/php/goNode.md)
+- [go重点基础知识](Notebooks/go/goNode.md)
 
 ### php功能性类和方法
 ## NGINX
