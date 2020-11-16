@@ -28,6 +28,9 @@
 - [fastcgi&phpfpm&5XX错误](Notebooks/php/PhpNoets.php)
 - [php执行过程](Notebooks/php/PhpProcessing.md)
 
+### golang
+- [go重点基础知识](Notebooks/php/goNode.md)
+
 ### php功能性类和方法
 ## NGINX
 ### nginx知识
