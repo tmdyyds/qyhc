@@ -9,6 +9,8 @@
 - [代理模式(结构型) ](DesignPatterns/php/Proxy.php)
 - [装饰器模式(结构型) ](DesignPatterns/php/Decorator.php)
 - [桥连模式(结构型) ](DesignPatterns/php/Bridge.php)
+- [策略模式(行为型) ](DesignPatterns/php/Strategy.php)
+- [观察者模式(行为型) ](DesignPatterns/php/Observer.php)
 
 <!-- ## 缓存
 
@@ -20,6 +22,7 @@
 ## 随时随记
 ### 随记笔记
 - [Code随记](AnyTimeRecords/AnyTimeCodeRecord.md)
+- [grapFunction(golang)](CommonFunction/golang/grapFunction.go)
 ## PHP
 ### php知识
 - [fastcgi&phpfpm&5XX错误](Notebooks/php/PhpNoets.php)
