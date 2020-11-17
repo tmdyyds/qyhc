@@ -11,6 +11,7 @@
 - [桥连模式(结构型) ](DesignPatterns/php/Bridge.php)
 - [策略模式(行为型) ](DesignPatterns/php/Strategy.php)
 - [观察者模式(行为型) ](DesignPatterns/php/Observer.php)
+- [命令模式(行为型) ](DesignPatterns/php/Command.php)
 
 <!-- ## 缓存
 
