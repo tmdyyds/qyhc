@@ -42,7 +42,7 @@
 
 ## 缓存
 ### redis知识
-- [redis笔记](Notebooks/redis/RedisNotes.php)
+- [redis笔记](Notebooks/redis/RedisNotes.md)
 
 ## 数据库
 ### MYSQL知识
