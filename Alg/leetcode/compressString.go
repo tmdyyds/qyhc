@@ -32,4 +32,31 @@ func compressString(S string) string {
 	}
 
 	return b.String()
+
+	//解法2 双指针
+
+	if len(S) == 0 {
+		return S
+	}
+
+	var b strings.Builder
+	i := 0
+	for i < len(S) {
+		j := i
+		//i和j一样则累加
+		for j < len(S) && S[i] == S[j] {
+			j++
+		}
+
+		b.WriteByte(S[i])
+		b.WriteString(strconv.Itoa(j - i))
+		i = j
+	}
+
+	//题意加如此判断
+	if b.Len() >= len(S) {
+		return S
+	}
+
+	return b.String()
 }
