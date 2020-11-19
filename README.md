@@ -55,9 +55,13 @@
 - [栈实现队列&队列实现栈(php)](Alg/exercisealg/sort.go)
 
 ### leetcode刷题
+- [28. 实现 strStr()(golang)](Alg/leetcode/strStr.go)
 - [144. 二叉树的前序遍历(golang)](Alg/leetcode/preorderTraversal.go)
 - [215. 数组中的第K个最大元素(golang)](Alg/leetcode/findKthLargest.go)
+- [283. 移动零(golang)](Alg/leetcode/moveZeroes.go)
 - [349. 两个数组的交集(golang)](Alg/leetcode/intersection.go)
+- [387. 字符串中的第一个唯一字符(golang)](Alg/leetcode/firstUniqChar.go)
+- [459. 重复的子字符串(golang)](Alg/leetcode/firstUniqChar.go)
 - [922. 按奇偶排序数组 II(golang)](Alg/leetcode/sortArrayByParityII.go)
 - [976. 三角形的最大周长(golang)](Alg/leetcode/largestPerimeter.go)
 - [1207. 独一无二的出现次数(golang)](Alg/leetcode/uniqueOccurrences.go)
