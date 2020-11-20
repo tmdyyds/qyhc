@@ -5,7 +5,7 @@
 
 #### 环境变量
 - $GOROOT 表示 Go 在你的电脑上的安装位置，它的值一般都是 $HOME/go，当然，你也可以安装在别的地方
-- $GOARCH 表示目标机器的处理器架构，它的值可以是 386、amd64 或 arm
+- $GOARCH 表示目标机器的处理器架构，它的值可以是 386( 32 位系统)、amd64(64位) 或 arm
 - $GOOS 表示目标机器的操作系统，它的值可以是 darwin、freebsd、linux 或 windows
 - $GOBIN 表示编译器和链接器的安装位置，默认是 $GOROOT/bin，如果你使用的是 Go 1.0.3 及以后的版本，一般情况下你可以将它的值设置为空，Go 将会使用前面提到的默认值
 - $GOPATH 默认采用和 $GOROOT 一样的值，但从 Go 1.1 版本开始，你必须修改为其它路径。它可以包含多个 Go 语言源码文件、包文件和可执行文件的路径，而这些路径下又必须分别包含三个规定的目录：src、pkg 和 bin，这三个目录分别用于存放源码文件、包文件和可执行文件
@@ -29,3 +29,5 @@ Go编译器支持交叉编译，也就是说你可以在一台机器上构建运
 #### import
 - 标准库包引入时,路径从GOROOT
 - import自定义引包时,路径从GOPATH的src下开始,不用带src,编译器会自动从src中开始引入
+#### go生成目标文件
+- window env GOOS=windows GOARCH=amd64 go build -o wangbin.exe main.go

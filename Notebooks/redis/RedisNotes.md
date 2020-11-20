@@ -1,5 +1,5 @@
 ## redis重点知识
-####Redis支持类型和底层数据结构关系
+#### Redis支持类型和底层数据结构关系
     ![](./images/redis底层数据和redis类型关系图.png)
 
 #### Redis和DB数据一致性问题
