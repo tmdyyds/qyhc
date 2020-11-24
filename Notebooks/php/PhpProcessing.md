@@ -14,7 +14,7 @@ AST 是 PHP7 版本的新特性，之前版本的 PHP 代码的执行过程中�
 - **Opcode**: 将语法树转换成 Opcode。需要将语法树转换成Opcode，才能被引擎直接执行。
 
 - **执行Opcodes**: opcodes 是 opcode 的集合形式，是 PHP 执行过程中的中间代码。PHP工程优化措施中有一个比较常见的“开启 opcache”，指的技术这里将 opcodes 进行缓存。通过省去从源码到 opcode 的阶段，引擎直接执行缓存好的 opacode，以提升性能。
-##PHP7内核架构图
+## PHP7内核架构图
     ![](./images/php7内核架构图.png)
 - zend引擎
 
