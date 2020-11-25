@@ -56,6 +56,7 @@
 
 ### leetcode刷题
 - [28. 实现 strStr()(golang)](Alg/leetcode/strStr.go)
+- [125. 验证回文串(golang)](Alg/leetcode/isPalindrome.go)
 - [144. 二叉树的前序遍历(golang)](Alg/leetcode/preorderTraversal.go)
 - [215. 数组中的第K个最大元素(golang)](Alg/leetcode/findKthLargest.go)
 - [283. 移动零(golang)](Alg/leetcode/moveZeroes.go)
