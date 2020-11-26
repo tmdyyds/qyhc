@@ -31,3 +31,13 @@ Go编译器支持交叉编译，也就是说你可以在一台机器上构建运
 - import自定义引包时,路径从GOPATH的src下开始,不用带src,编译器会自动从src中开始引入
 #### go生成目标文件
 - window env GOOS=windows GOARCH=amd64 go build -o wangbin.exe main.go
+
+#### channel(关闭后,能读不能写)
+- channe遍历使用for range
+    + 在遍历时,若channel没关闭,则报deadlock错误
+    + 如果channel已关闭,则会正常遍历,遍历完后就会退出遍历
+
+#### 反射
+- Type是类型,Kind是类别,type和kind可能相同也可能不同
+    + var num int = 10 num的type是int，kind也是int
+    + var stu Student(student是struct) stu的type是包名.Student,Kind是 struct
