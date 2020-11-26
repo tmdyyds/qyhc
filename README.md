@@ -101,4 +101,4 @@
 - [面试题](面试题/go/goQuestions.md)
 
 #### Redis面试题
-- [面试题](面试题/go/redisQuestions.md)
+- [面试题](面试题/redis/redisQuestions.md)
