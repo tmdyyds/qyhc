@@ -3,6 +3,7 @@ func TestAlg1102(t *testing.T) {
 	fmt.Println(printBin(ts))
 }
 
+
 //面试题 05.02. 二进制数转字符串
 func printBin(num float64) string {
 	r := "0."
