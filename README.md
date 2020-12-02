@@ -61,6 +61,7 @@
 
 ### leetcode刷题
 - [28. 实现 strStr()(golang)](Alg/leetcode/strStr.go)
+- [33. 搜索旋转排序数组(golang)](Alg/leetcode/search.go)
 - [125. 验证回文串(golang)](Alg/leetcode/isPalindrome.go)
 - [144. 二叉树的前序遍历(golang)](Alg/leetcode/preorderTraversal.go)
 - [215. 数组中的第K个最大元素(golang)](Alg/leetcode/findKthLargest.go)
@@ -68,6 +69,7 @@
 - [349. 两个数组的交集(golang)](Alg/leetcode/intersection.go)
 - [387. 字符串中的第一个唯一字符(golang)](Alg/leetcode/firstUniqChar.go)
 - [459. 重复的子字符串(golang)](Alg/leetcode/repeatedSubstringPattern.go)
+- [468. 验证IP地址(golang)](Alg/leetcode/validIPAddress.go)
 - [680. 验证回文字符串 Ⅱ(golang)](Alg/leetcode/validPalindrome.go)
 - [709. 转换成小写字母(golang)](Alg/leetcode/toLowerCase.go)
 - [804. 唯一摩尔斯密码词(golang)](Alg/leetcode/uniqueMorseRepresentations.go)
