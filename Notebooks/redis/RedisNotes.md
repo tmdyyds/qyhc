@@ -193,10 +193,97 @@ Worst run took 36x longer than the average latency.
     + 通过 Redis 日志，或者是 latency monitor 工具，查询变慢的请求
     + 文件系统：AOF 模式
 
+#### Redis删除数据后,为什么内存占用率(top查看)还是很高?
+- 当数据删除后，Redis 释放的内存空间会由内存分配器管理，并不会立即返回给操作系统。所以，操作系统仍然会记录着给 Redis 分配了大量内存
+    + 问题1 Redis释放的内存空间可能并不是连续的，那么，这些不连续的内存空间很有可能处于一种闲置的状态
+    + 问题2 虽然有空闲空间，Redis 却无法用来保存数据，不仅会减少 Redis 能够实际保存的数据量，还会降低 Redis 运行机器的成本回报率
+- 删除数据后会造成大量内存碎片(内因是操作系统的内存分配机制，外因是 Redis 的负载特征。)
+    + 内因：内存分配器的分配策略
+        * Redis 可以使用 libc、jemalloc、tcmalloc 多种内存分配器来分配内存，默认使用 jemalloc,jemalloc 的分配策略之一，是按照一系列固定的大小划分内存空间，例如 8 字节、16 字节、32 字节、48 字节，…, 2KB、4KB、8KB 等。当程序申请的内存最接近某个固定值时，jemalloc 会给它分配相应大小的空间,这样的分配方式本身是为了减少分配次数。例如，Redis 申请一个 20 字节的空间保存数据，jemalloc 就会分配 32 字节，此时，如果应用还要写入 10 字节的数据，Redis 就不用再向操作系统申请空间了，因为刚才分配的 32 字节已经够用了，这就避免了一次分配操作.但是，如果 Redis 每次向分配器申请的内存空间大小不一样，这种分配方式就会有形成碎片的风险，而这正好来源于 Redis 的外因了
+    + 外因：键值对大小不一样和删改操作
+        * Redis 通常作为共用的缓存系统或键值数据库对外提供服务，所以，不同业务应用的数据都可能保存在 Redis 中，这就会带来不同大小的键值对。这样一来，Redis 申请内存空间分配时，本身就会有大小不一的空间需求。这是第一个外因
+        * 这些键值对会被修改和删除，这会导致空间的扩容和释放
+    + 如何判断是否有内存碎片?
+        * INFO memory命令, mem_fragmentation_ratio指标
+            - mem_fragmentation_ratio = used_memory_rss/ used_memory,used_memory_rss 是操作系统实际分配给 Redis 的物理内存空间，里面就包含了碎片；而 used_memory 是 Redis 为了保存数据实际申请使用的空间
+    + 如何清理内存碎片?
+        * 重启 Redis 实例
+        * Redis 自身提供了一种内存碎片自动清理的方法(4.0-RC3 版本以后)
+            - 碎片清理是有代价的,操作系统需要把多份数据拷贝到新位置，把原有空间释放出来，这会带来时间开销。因为 Redis 是单线程，在数据拷贝时，Redis 只能等着，这就导致 Redis 无法及时处理请求，性能就会降低。而且，有的时候，数据拷贝还需要注意顺序，就像刚刚说的清理内存碎片的例子，操作系统需要先拷贝 D，并释放 D 的空间后，才能拷贝 B。这种对顺序性的要求，会进一步增加 Redis 的等待时间，导致性能降低
+            - 尽量缓解这个问题,这就要提到，Redis 专门为自动内存碎片清理功机制设置的参数了。我们可以通过设置参数，来控制碎片清理的开始和结束时机，以及占用的 CPU 比例，从而减少碎片清理对 Redis 本身请求处理的性能影响
+                + config set activedefrag yes(启用了自动清理功能)
+                + 上面命令仅启动,具体什么时候清理，会受到下面这两个参数的控制
+                    * active-defrag-ignore-bytes 100mb：表示内存碎片的字节数达到 100MB 时，开始清理
+                    * active-defrag-threshold-lower 10：表示内存碎片空间占操作系统分配给 Redis 的总空间比例达到 10% 时，开始清理
+                + 为了尽可能减少碎片清理对 Redis 正常请求处理的影响，自动内存碎片清理功能在执行时，还会监控清理操作占用的 CPU 时间，而且还设置了两个参数，分别用于控制清理操作占用的 CPU 时间比例的上、下限，既保证清理工作能正常进行，又避免了降低 Redis 性能。这两个参数具体如下
+                    * active-defrag-cycle-min 25： 表示自动清理过程所用 CPU 时间的比例不低于 25%，保证清理能正常开展
+                    * active-defrag-cycle-max 75：表示自动清理过程所用 CPU 时间的比例不高于 75%，一旦超过，就停止清理，从而避免在清理时，大量的内存拷贝阻塞 Redis，导致响应延迟升高
+                    
+#### 何应对输出缓冲区溢出（客户端缓冲区）？
+- 避免 bigkey 操作返回大量数据结果
+- 避免在线上环境中持续使用 MONITOR 命令
+- 使用 client-output-buffer-limit 设置合理的缓冲区大小上限，或是缓冲区连续写入时间和写入量上限
+
+#### Redis如何启用慢查询日志?
+- 使用慢查询日志前，我们需要设置两个参数
+    + slowlog-log-slower-than：这个参数表示，慢查询日志对执行时间大于多少微秒的命令进行记录
+    + slowlog-max-len：这个参数表示，慢查询日志最多能记录多少条命令记录。慢查询日志的底层实现是一个具有预定大小的先进先出队列，一旦记录的命令数量超过了队列长度，最先记录的命令操作就会被删除。这个值默认是 128。但是，如果慢查询命令较多的话，日志里就存不下了；如果这个值太大了，又会占用一定的内存空间。所以，一般建议设置为 1000 左右，这样既可以多记录些慢查询命令，方便排查，也可以避免内存开销
+- SLOWLOG GET查看慢查询日志中记录的命令操作
+    + 参数返回数据详细内容
+        * 
+        ```SLOWLOG GET 1
+        1) 1) (integer) 33           //每条日志的唯一ID编号
+           2) (integer) 1600990583   //命令执行时的时间戳
+           3) (integer) 20906        //命令执行的时长，单位是微秒
+           4) 1) "keys"               //具体的执行命令和参数
+              2) "abc*"
+           5) "127.0.0.1:54793"      //客户端的IP和端口号
+           6) ""                     //客户端的名称，此处为空
+        ```
+- latency monitor 监控工具，这个工具可以用来监控 Redis 运行过程中的峰值延迟情况
+
+#### 如何排查 Redis 的 bigkey？
+- Redis 可以在执行 redis-cli 命令时带上–bigkeys 选项，进而对整个数据库中的键值对大小情况进行统计分析
+    + 
+    ``` ./redis-cli  --bigkeys
+
+    -------- summary -------
+    Sampled 32 keys in the keyspace!
+    Total key length in bytes is 184 (avg len 5.75)
+
+    //统计每种数据类型中元素个数最多的bigkey
+    Biggest   list found 'product1' has 8 items
+    Biggest   hash found 'dtemp' has 5 fields
+    Biggest string found 'page2' has 28 bytes
+    Biggest stream found 'mqstream' has 4 entries
+    Biggest    set found 'userid' has 5 members
+    Biggest   zset found 'device:temperature' has 6 members
+
+    //统计每种数据类型的总键值个数，占所有键值个数的比例，以及平均大小
+    4 lists with 15 items (12.50% of keys, avg size 3.75)
+    5 hashs with 14 fields (15.62% of keys, avg size 2.80)
+    10 strings with 68 bytes (31.25% of keys, avg size 6.80)
+    1 streams with 4 entries (03.12% of keys, avg size 4.00)
+    7 sets with 19 members (21.88% of keys, avg size 2.71)
+    5 zsets with 17 members (15.62% of keys, avg size 3.40)
+    ```
+- 不过，在使用–bigkeys 选项时，有一个地方需要注意一下。这个工具是通过扫描数据库来查找 bigkey 的，所以，在执行的过程中，会对 Redis 实例的性能产生影响。如果你在使用主从集群，我建议你在从节点上执行该命令。因为主节点上执行时，会阻塞主节点。如果没有从节点，那么，我给你两个小建议：第一个建议是，在 Redis 实例业务压力的低峰阶段进行扫描查询，以免影响到实例的正常运行；第二个建议是，可以使用 -i 参数控制扫描间隔，避免长时间扫描降低 Redis 实例的性能。例如，我们执行如下命令时，redis-cli 会每扫描 100 次暂停 100 毫秒（0.1 秒）
+    + ./redis-cli  --bigkeys -i 0.1
+        * 使用 Redis 自带的–bigkeys 选项排查 bigkey，有两个不足的地方：这个方法只能返回每种类型中最大的那个 bigkey，无法得到大小排在前 N 位的 bigkey；对于集合类型来说，这个方法只统计集合元素个数的多少，而不是实际占用的内存量。但是，一个集合中的元素个数多，并不一定占用的内存就多。因为，有可能每个元素占用的内存很小，这样的话，即使元素个数有很多，总内存开销也不大。所以，如果我们想统计每个数据类型中占用内存最多的前 N 个 bigkey，可以自己开发一个程序，来进行统计
+        * 基本的开发思路：使用 SCAN 命令对数据库扫描，然后用 TYPE 命令获取返回的每一个 key 的类型。接下来，对于 String 类型，可以直接使用 STRLEN 命令获取字符串的长度，也就是占用的内存空间字节数
+        * 集合类型来说，有两种方法可以获得它占用的内存大小,如果你能够预先从业务层知道集合元素的平均大小，那么，可以使用下面的命令获取集合元素的个数，然后乘以集合元素的平均大小，这样就能获得集合占用的内存大小了
+            - List 类型：LLEN 命令
+            - Hash 类型：HLEN 命令
+            - Set 类型：SCARD 命令
+            - Sorted Set 类型：ZCARD 命令
+            - 如果你不能提前知道写入集合的元素大小，可以使用 MEMORY USAGE 命令（需要 Redis 4.0 及以上版本），查询一个键值对占用的内存空间。例如，执行以下命令，可以获得 key 为 user:info 这个集合类型占用的内存空间大小
+                + MEMORY USAGE user:info
+                    (integer) 315663239
 
 #### Redis问题汇总
 - 为什么主从库间的复制不使用 AOF
     + RDB 文件是二进制文件，无论是要把 RDB 写入磁盘，还是要通过网络传输 RDB，IO 效率都比记录和传输 AOF 的高
     + 在从库端进行恢复时，用 RDB 的恢复效率要高于用 AOF
+- MONITOR 命令主要用在调试环境中，不要在线上生产环境中持续使用 MONITOR(monitor容易造成客户端输出缓存区溢出)
 
 
