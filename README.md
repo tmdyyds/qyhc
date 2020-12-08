@@ -25,6 +25,11 @@
 - [Code随记](AnyTimeRecords/AnyTimeCodeRecord.md)
 - [grapFunction(golang)](CommonFunction/golang/grapFunction.go)
 - [常用排序函数(golang)](CommonFunction/golang/sortFunc.go)
+
+## LINUX
+### LINUX命令
+- [LINUX常用命令工具](Notebooks/linux/LinuxNotes.md)
+
 ## PHP
 ### php知识
 - [fastcgi&phpfpm&5XX错误](Notebooks/php/PhpNoets.php)
