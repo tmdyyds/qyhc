@@ -1,5 +1,5 @@
 ## redis重点知识
-###Redis类型特点
+### Redis类型特点
 - HASH
     + 不支持对数据的范围查询
 - SORTED SET
