@@ -37,6 +37,25 @@ Go编译器支持交叉编译，也就是说你可以在一台机器上构建运
     + 在遍历时,若channel没关闭,则报deadlock错误
     + 如果channel已关闭,则会正常遍历,遍历完后就会退出遍历
 
+#### 类型断言
+```
+//如果将一个接口类型变量断言成一个指针类型的变量，在断言成功的前提下，两个变量将共享内存空间
+package main
+
+import "fmt"
+
+func main() {
+    var a = 34
+    var i interface{} = &a
+
+    o := i.(*int)
+
+    fmt.Println(i, o)
+}
+
+0xc0000120a8 0xc0000120a8
+```
+
 #### 反射
 - Type是类型,Kind是类别,type和kind可能相同也可能不同
     + var num int = 10 num的type是int，kind也是int
