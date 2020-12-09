@@ -36,6 +36,15 @@ Go编译器支持交叉编译，也就是说你可以在一台机器上构建运
 - channe遍历使用for range
     + 在遍历时,若channel没关闭,则报deadlock错误
     + 如果channel已关闭,则会正常遍历,遍历完后就会退出遍历
+    
+#### Slice
+- 检查slice是否为空(用len(s) == 0, s != nil时也会有为空)
+```
+var s []int //len(s) == 0, s == nil
+s = nil //len(s) == 0, s == nil
+s = []int(nil) //len(s) == 0, s == nil
+s = []int{} //len(s) == 0, s != nil
+```
 
 #### 类型断言
 ```
