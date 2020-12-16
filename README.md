@@ -35,8 +35,10 @@
 - [fastcgi&phpfpm&5XX错误](Notebooks/php/PhpNoets.php)
 - [php执行过程](Notebooks/php/PhpProcessing.md)
 
-### golang
+### GO
 - [go重点基础知识](Notebooks/go/goNode.md)
+- [函数笔记](CommonFunction/golang/func_func.go)
+- [其他函数笔记](CommonFunction/golang/func_func.go)
 
 ### php封装类&函数
 - [类]()
