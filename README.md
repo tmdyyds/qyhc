@@ -40,10 +40,6 @@
 - [函数笔记](CommonFunction/golang/func_func.go)
 - [其他函数笔记](CommonFunction/golang/func_func.go)
 
-### php封装类&函数
-- [类]()
-- [函数]()
-
 ## NGINX
 ### nginx知识
 - [nginx500XX错误](Notebooks/nginx/NginxNotes.php)
