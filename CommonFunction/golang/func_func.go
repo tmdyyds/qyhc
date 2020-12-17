@@ -1,3 +1,52 @@
+//start
+// defer trace("bigSlowOperation")() //注意最后括号
+// time.Sleep(10 * time.Second)
+// 函数或功能的执行时间
+func TimeDiff(msg string) func() {
+	start := time.Now()
+	log.Printf("enter %s", msg)
+	return func() {
+		log.Printf("exit %s (%s)", msg, time.Since(start))
+	}
+}
+//end
+
+//start
+//map的key,不为string为slice(这种方式可以处理任意一种不可比较的key,不仅仅是slice)
+var m = make(map[string]int)
+
+func k(list []string) string {
+	return fmt.Sprintf("%q", list)
+}
+
+func Add(list []string) {
+	m[k(list)]++
+}
+
+func Count(list []string) int {
+	return m[k(list)]
+}
+
+//比较
+s1 := []string{"a", "b"}
+s2 := []string{"c", "d"}
+s3 := []string{"e", "f"}
+s4 := []string{"a", "b"}
+
+Add(s1)
+Add(s2)
+Add(s3)
+
+//判断
+for key, v := range m {
+	if key == k(s4) {
+		fmt.Println(key, v, "===")
+	}
+}
+
+//end
+
+
 //给map按着key排序,并输出/打印map排序后数据
 // m := map[int]int{
 // 		4: 40,
@@ -5,7 +54,7 @@
 // 		3: 30,
 // 	}
 // 	sortMap(m)
-func sortMapByKey(m map[int]int) {
+func SortMapByKey(m map[int]int) {
 	slice := []int{}
 	for k, _ := range m {
 		slice = append(slice, k)
@@ -48,7 +97,7 @@ func remove(slice []int, i int) []int {
 // 1*8=8 2*8=16 3*8=24 4*8=32 5*8=40 6*8=48 7*8=56 8*8=64
 // 1*9=9 2*9=18 3*9=27 4*9=36 5*9=45 6*9=54 7*9=63 8*9=72 9*9=81
 //九九乘法表
-func mpTable99() {
+func MpTable99() {
 	level := 9
 	for i := 1; i <= level; i++ {
 		for j := 1; j <= i; j++ {
