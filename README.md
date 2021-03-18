@@ -58,7 +58,7 @@
 - [TCP/IP基本知识点](Computers/tcpip/tcpip简单知识点.md)
 
 ## 算法
-### 算法知识
+### 算法归类
 - [排序算法(冒泡、选择、插入、快排、归并)(golang)](Alg/exercisealg/sort.go)
 - [栈实现队列&队列实现栈(php)](Alg/exercisealg/sort.go)
 
