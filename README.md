@@ -22,9 +22,8 @@
 ## 网络 -->
 ## 随时随记
 ### 随记笔记
-- [Code随记](AnyTimeRecords/AnyTimeCodeRecord.md)
-- [grapFunction(golang)](CommonFunction/golang/grapFunction.go)
-- [常用排序函数(golang)](CommonFunction/golang/sortFunc.go)
+- [笔记](AnyTimeRecords/AnyTimeCodeRecord.md)
+- [函数(golang)](CommonFunction/golang/command_func.go)
 
 ## LINUX
 ### LINUX工具命令
@@ -55,6 +54,9 @@
 ## 计算机&&TCP/IP&&HTTP
 ### TCP/IP知识
 - [TCP/IP基本知识点](Computers/tcpip/tcpip简单知识点.md)
+
+### 计算机知识
+- [位运算](Computers/bitoperation/BitOperation.php)
 
 ## 算法
 ### 算法归类

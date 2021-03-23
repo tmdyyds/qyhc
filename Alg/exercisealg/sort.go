@@ -27,7 +27,7 @@ func InsertionSort(r []int) {
 	}
 	for i := 1; i < n; i++ {
 		val := r[i]
-		j := i - 1 //为了下面插入位置
+		j := i - 1 //为了下面插入位置d
 
 		//这里for循环仅为了在已排好序的数据中寻找位置和移动数据
 		for ; j >= 0; j-- {
