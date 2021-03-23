@@ -27,8 +27,8 @@
 - [常用排序函数(golang)](CommonFunction/golang/sortFunc.go)
 
 ## LINUX
-### LINUX命令
-- [LINUX常用命令工具](Notebooks/linux/LinuxNotes.md)
+### LINUX工具命令
+- [LINUX常用命令](Notebooks/linux/LinuxNotes.md)
 
 ## PHP
 ### php知识
@@ -50,8 +50,7 @@
 
 ## 数据库
 ### MYSQL知识
-- [mysql笔记(语法&优化&注重点)](Notebooks/mysql/MysqlNotes.php)
-- [mysql笔记(语法&优化&注重点)](Notebooks/mysql/MysqlNotes.md)
+- [mysql笔记](Notebooks/mysql/MysqlNotes.php)
 
 ## 计算机&&TCP/IP&&HTTP
 ### TCP/IP知识
