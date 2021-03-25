@@ -59,13 +59,16 @@
 - [位运算](Computers/bitoperation/BitOperation.php)
 
 ## 算法
-### 算法归类
+### 经典算法
 - [排序算法(冒泡、选择、插入、快排、归并)(golang)](Alg/exercisealg/sort.go)
 - [栈实现队列&队列实现栈(php)](Alg/exercisealg/sort.go)
 
 ### leetcode刷题
 - [28. 实现 strStr()(golang)](Alg/leetcode/strStr.go)
 - [33. 搜索旋转排序数组(golang)](Alg/leetcode/search.go)
+- [100. 相同的树(golang)](Alg/leetcode/isSameTree.go)
+- [101. 对称二叉树(golang)](Alg/leetcode/isSymmetric.go)
+- [104. 二叉树的最大深度(golang)](Alg/leetcode/maxDepth.go)
 - [125. 验证回文串(golang)](Alg/leetcode/isPalindrome.go)
 - [144. 二叉树的前序遍历(golang)](Alg/leetcode/preorderTraversal.go)
 - [215. 数组中的第K个最大元素(golang)](Alg/leetcode/findKthLargest.go)

@@ -9,6 +9,9 @@ sql语句->连接器->查询缓存(mysql8.0已删除)->解析器->优化器->执
 - 不可重复读 对某数据进行读取,两次读取的结果不同,这因为其他事务对改数据进行了修改或删除
 - 幻读(专指插入数据) 在事务中,前后两次查询到符合条件数据总数不一致,其他事务插入数据
 
+### 事务
+- begin/start transaction 命令并不是一个事务的起点,在执行到它们之后的第一个操作 InnoDB 表的语句,事务才真正启动。如果你想要马上启动一个事务,可以使用 start transaction with consistent snapshot 这个命令
+
 ## MYSQL语句
 ```php
     //连接mysql(连接建立以后,权限就确定下来。如果发生变化,需要下次重新连接时生效)
@@ -102,7 +105,7 @@ sql语句->连接器->查询缓存(mysql8.0已删除)->解析器->优化器->执
     DROP TABLE view_name 
 
     DDL: CREATE DROP ALTER //修改表结构
-    DML: SELECT DELETE UPDATE INSERT //增删改查
+    DML: DELETE UPDATE INSERT //增删改
 ```
 ## MYSQL日志
 - WAL技术(Write-Ahead Logging)
@@ -116,6 +119,14 @@ sql语句->连接器->查询缓存(mysql8.0已删除)->解析器->优化器->执
 
 
 TIP: SQL在更新的时候, 除了记录变更记录,还会记录一条变更相反的回滚操作记录,前者记录在redo log,后者记录在undo log
+
+## 锁
+- 全局锁(读锁 给数据库加全局读锁) Flush tables with read lock (FTWRL)
+    + 使用场景 做全库逻辑备份
+- 表锁
+    + 表锁(lock tables … read/write,lock tables)
+    + 元数据锁(MDL 当对一个表做增删改查操作的时候,加 MDL 读锁；当要对表做结构变更操作的时候,加 MDL 写锁)
+- 行锁
 
 ## MYSQL常用语法
 ```php

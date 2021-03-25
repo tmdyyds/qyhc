@@ -13,7 +13,7 @@ class Queue2Stack
     //删除栈顶元素并返回
     public function pop()
     {
-        //1 2 3 队列元素 栈元素 3 1 2
+        //1 2 3 队列元素 栈元素 3 2 1
         //这里不模拟转换 直接使用top 等获取
         $top = $this->queue->top();
         $this->queue->pop();
