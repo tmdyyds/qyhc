@@ -24,6 +24,7 @@
 ### 随记笔记
 - [笔记](AnyTimeRecords/AnyTimeCodeRecord.md)
 - [函数(golang)](CommonFunction/golang/command_func.go)
+- [高并发思路设计与Code实现(php)](CommonFunction/golang/command_func.go)
 
 ## LINUX
 ### LINUX工具命令
@@ -66,12 +67,17 @@
 ### leetcode刷题
 - [28. 实现 strStr()(golang)](Alg/leetcode/strStr.go)
 - [33. 搜索旋转排序数组(golang)](Alg/leetcode/search.go)
+- [94. 二叉树的中序遍历(golang)](Alg/leetcode/inorderTraversal.go)
 - [100. 相同的树(golang)](Alg/leetcode/isSameTree.go)
 - [101. 对称二叉树(golang)](Alg/leetcode/isSymmetric.go)
 - [104. 二叉树的最大深度(golang)](Alg/leetcode/maxDepth.go)
 - [125. 验证回文串(golang)](Alg/leetcode/isPalindrome.go)
 - [144. 二叉树的前序遍历(golang)](Alg/leetcode/preorderTraversal.go)
+- [145. 二叉树的后序遍历(golang)](Alg/leetcode/postorderTraversal.go
+- [190. 颠倒二进制位(golang)](Alg/leetcode/reverseBits.go
 - [215. 数组中的第K个最大元素(golang)](Alg/leetcode/findKthLargest.go)
+- [226. 翻转二叉树(golang)](Alg/leetcode/invertTree.go)
+- [235. 二叉搜索树的最近公共祖先(golang)](Alg/leetcode/lowestCommonAncestor.go)
 - [283. 移动零(golang)](Alg/leetcode/moveZeroes.go)
 - [349. 两个数组的交集(golang)](Alg/leetcode/intersection.go)
 - [387. 字符串中的第一个唯一字符(golang)](Alg/leetcode/firstUniqChar.go)
@@ -81,6 +87,7 @@
 - [709. 转换成小写字母(golang)](Alg/leetcode/toLowerCase.go)
 - [804. 唯一摩尔斯密码词(golang)](Alg/leetcode/uniqueMorseRepresentations.go)
 - [830. 较大分组的位置(golang)](Alg/leetcode/largeGroupPositions.go)
+- [905. 按奇偶排序数组(golang)](Alg/leetcode/sortArrayByParity.go)
 - [922. 按奇偶排序数组 II(golang)](Alg/leetcode/sortArrayByParityII.go)
 - [976. 三角形的最大周长(golang)](Alg/leetcode/largestPerimeter.go)
 - [1108. IP 地址无效化(golang)](Alg/leetcode/defangIPaddr.go)
@@ -107,6 +114,7 @@
 - [面试题 16.21. 交换和(golang)](Alg/leetcode/findSwapValues.go)
 - [面试题 17.11. 单词距离(golang)](Alg/leetcode/findClosest.go)
 - [剑指 Offer 03. 数组中重复的数字(golang)](Alg/leetcode/findRepeatNumber.go)
+- [剑指 Offer 27. 二叉树的镜像(golang)](Alg/leetcode/mirrorTree.go)
 - [剑指 Offer 45. 把数组排成最小的数(golang)](Alg/leetcode/minNumber.go)
 - [剑指 Offer 58 - I. 翻转单词顺序(golang)](Alg/leetcode/reverseWords.go)
 - [剑指 Offer 58 - II. 左旋转字符串(golang)](Alg/leetcode/reverseLeftWords.go)
