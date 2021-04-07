@@ -65,6 +65,9 @@
 - [栈实现队列&队列实现栈(php)](Alg/exercisealg/sort.go)
 
 ### leetcode刷题
+- [1. 两数之和(golang)](Alg/leetcode/twoSum.go)
+- [3. 无重复字符的最长子串(golang)](Alg/leetcode/twoSum.go)
+- [7. 整数反转(golang)](Alg/leetcode/reverse.go)
 - [28. 实现 strStr()(golang)](Alg/leetcode/strStr.go)
 - [33. 搜索旋转排序数组(golang)](Alg/leetcode/search.go)
 - [94. 二叉树的中序遍历(golang)](Alg/leetcode/inorderTraversal.go)
