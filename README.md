@@ -85,6 +85,7 @@
 - [125. 验证回文串(golang)](Alg/leetcode/isPalindrome.go)
 - [144. 二叉树的前序遍历(golang)](Alg/leetcode/preorderTraversal.go)
 - [145. 二叉树的后序遍历(golang)](Alg/leetcode/postorderTraversal.go
+- [179. 最大数(golang)](Alg/leetcode/largestNumber.go
 - [190. 颠倒二进制位(golang)](Alg/leetcode/reverseBits.go
 - [215. 数组中的第K个最大元素(golang)](Alg/leetcode/findKthLargest.go)
 - [226. 翻转二叉树(golang)](Alg/leetcode/invertTree.go)
