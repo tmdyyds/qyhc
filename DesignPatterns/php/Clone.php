@@ -46,7 +46,6 @@ $n = unserialize($n);
 var_dump($p, $n);*/
 
 
-
 //原型模式摘自https://refactoringguru.cn/design-patterns/prototype/php/example#example-1
 class Prototype
 {
