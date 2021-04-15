@@ -67,6 +67,7 @@
 ### leetcode刷题
 - [1. 两数之和(golang)](Alg/leetcode/twoSum.go)
 - [3. 无重复字符的最长子串(golang)](Alg/leetcode/twoSum.go)
+- [4. 寻找两个正序数组的中位数(php)](Alg/leetcode/findMedianSortedArrays.php)
 - [7. 整数反转(golang)](Alg/leetcode/reverse.go)
 - [8. 字符串转换整数 (atoi)(php)](Alg/leetcode/myAtoi.php)
 - [9. 回文数(golang)](Alg/leetcode/isPalindrome9.php)
@@ -76,6 +77,7 @@
 - [27. 移除元素(golang)](Alg/leetcode/removeElement.go)
 - [28. 实现 strStr()(golang)](Alg/leetcode/strStr.go)
 - [33. 搜索旋转排序数组(golang)](Alg/leetcode/search.go)
+- [35. 搜索插入位置(golang)](Alg/leetcode/searchInsert.go)
 - [46. 全排列(golang)](Alg/leetcode/permute.go)
 - [53. 最大子序和(golang)](Alg/leetcode/maxSubArray.go)
 - [94. 二叉树的中序遍历(golang)](Alg/leetcode/inorderTraversal.go)
@@ -85,11 +87,13 @@
 - [125. 验证回文串(golang)](Alg/leetcode/isPalindrome.go)
 - [144. 二叉树的前序遍历(golang)](Alg/leetcode/preorderTraversal.go)
 - [145. 二叉树的后序遍历(golang)](Alg/leetcode/postorderTraversal.go
+- [146. LRU 缓存机制(php)](Alg/leetcode/LRUCache.go
 - [179. 最大数(golang)](Alg/leetcode/largestNumber.go
 - [190. 颠倒二进制位(golang)](Alg/leetcode/reverseBits.go
 - [215. 数组中的第K个最大元素(golang)](Alg/leetcode/findKthLargest.go)
 - [226. 翻转二叉树(golang)](Alg/leetcode/invertTree.go)
 - [235. 二叉搜索树的最近公共祖先(golang)](Alg/leetcode/lowestCommonAncestor.go)
+- [239. 滑动窗口最大值(golang)](Alg/leetcode/maxSlidingWindow.go)
 - [283. 移动零(golang)](Alg/leetcode/moveZeroes.go)
 - [349. 两个数组的交集(golang)](Alg/leetcode/intersection.go)
 - [387. 字符串中的第一个唯一字符(golang)](Alg/leetcode/firstUniqChar.go)
@@ -97,8 +101,10 @@
 - [455. 分发饼干(php)](Alg/leetcode/findContentChildren.php)
 - [459. 重复的子字符串(golang)](Alg/leetcode/repeatedSubstringPattern.go)
 - [468. 验证IP地址(golang)](Alg/leetcode/validIPAddress.go)
+- [496. 下一个更大元素 I(php)](Alg/leetcode/nextGreaterElement.php)
 - [680. 验证回文字符串 Ⅱ(golang)](Alg/leetcode/validPalindrome.go)
 - [700. 二叉搜索树中的搜索(golang)](Alg/leetcode/searchBST.go)
+- [704. 二分查找(golang)](Alg/leetcode/search704.go)
 - [709. 转换成小写字母(golang)](Alg/leetcode/toLowerCase.go)
 - [783. 二叉搜索树节点最小距离(golang)](Alg/leetcode/minDiffInBST.go)
 - [804. 唯一摩尔斯密码词(golang)](Alg/leetcode/uniqueMorseRepresentations.go)
