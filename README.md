@@ -136,6 +136,7 @@
 - [面试题 16.16. 部分排序(golang)](Alg/leetcode/subSort.go)
 - [面试题 16.21. 交换和(golang)](Alg/leetcode/findSwapValues.go)
 - [面试题 17.11. 单词距离(golang)](Alg/leetcode/findClosest.go)
+- [面试题 17.16. 按摩师(golang)](Alg/leetcode/massage.go)
 - [剑指 Offer 03. 数组中重复的数字(golang)](Alg/leetcode/findRepeatNumber.go)
 - [剑指 Offer 27. 二叉树的镜像(golang)](Alg/leetcode/mirrorTree.go)
 - [剑指 Offer 45. 把数组排成最小的数(golang)](Alg/leetcode/minNumber.go)
